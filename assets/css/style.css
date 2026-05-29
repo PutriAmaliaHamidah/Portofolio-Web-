@@ -1,0 +1,110 @@
+/* CSS Variables (Palette) */
+:root{
+  --bg-main: #0F172A;
+  --bg-section: #1E293B;
+  --accent-primary: #38BDF8;
+  --accent-secondary: #818CF8;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --max-width: 1200px;
+  --radius: 12px;
+}
+
+/* Base / Mobile-first */
+*{box-sizing:border-box}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg-main);
+  color:var(--text-primary);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+a{color:var(--accent-primary);text-decoration:none}
+
+.wrap{max-width:var(--max-width);margin:0 auto;padding:24px;}
+
+/* Simple sticky header / nav */
+header{position:sticky;top:0;z-index:40;background:linear-gradient(180deg, rgba(15,23,42,0.6), rgba(15,23,42,0.35));backdrop-filter:blur(6px);padding:12px 0}
+.nav{display:flex;gap:12px;align-items:center;justify-content:space-between}
+.brand{font-weight:700;color:var(--text-primary);letter-spacing:0.2px}
+.navlinks{display:flex;gap:10px}
+.navlinks a{padding:8px 12px;border-radius:8px;color:var(--text-secondary);font-weight:600;font-size:14px}
+.navlinks a:hover{color:var(--text-primary);background:rgba(255,255,255,0.02)}
+
+/* HERO - full viewport, split layout */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr;align-items:center;padding:40px 0}
+.hero-inner{display:flex;flex-direction:column;gap:28px}
+
+/* Left text block */
+.hero-title{font-size:clamp(32px,8vw,72px);line-height:0.95;font-weight:800;margin:0}
+.name-gradient{
+  background:linear-gradient(90deg,var(--accent-primary),var(--accent-secondary));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  display:inline-block;padding:4px 0
+}
+.hero-sub{color:var(--text-secondary);font-weight:500;font-size:16px;margin-top:8px}
+
+/* Right 3D container placeholder */
+.hero-visual{margin-top:20px;border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;display:flex;align-items:center;justify-content:center;min-height:240px}
+.visual-shell{width:100%;height:280px;max-width:520px;border-radius:10px;border:1px dashed rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);font-weight:600}
+
+/* ABOUT Section */
+section{padding:60px 0}
+.section-title{font-size:20px;color:var(--text-primary);font-weight:700;margin-bottom:18px}
+.cards{display:grid;gap:16px}
+.card{background:var(--bg-section);padding:18px;border-radius:12px}
+.biodata dt{color:var(--text-secondary);font-weight:600}
+.biodata dd{margin:0 0 12px 0;color:var(--text-primary);font-weight:500}
+
+/* Timeline */
+.timeline{position:relative;padding-left:18px}
+.timeline::before{content:'';position:absolute;left:6px;top:0;width:2px;height:100%;background:linear-gradient(180deg,var(--accent-primary),var(--accent-secondary));opacity:0.6;border-radius:2px}
+.timeline-item{position:relative;padding:10px 0 16px 18px}
+.timeline-item::before{content:'';position:absolute;left:-12px;top:12px;width:12px;height:12px;border-radius:50%;background:var(--bg-main);box-shadow:0 0 0 4px rgba(56,189,248,0.06);border:2px solid var(--accent-primary)}
+.timeline-item h4{margin:0 0 6px 0;font-size:15px}
+.timeline-item p{margin:0;color:var(--text-secondary);font-size:14px}
+
+/* Portfolio Grid */
+.portfolio-grid{display:grid;gap:18px}
+
+/* Row 1 - Photography (masonry-like with CSS columns) */
+.photo-masonry{column-count:2;column-gap:12px}
+.photo-item{break-inside:avoid;margin-bottom:12px;border-radius:10px;overflow:hidden;position:relative}
+.photo-item img{width:100%;height:auto;display:block;transition:transform .45s ease}
+.photo-item:hover img{transform:scale(1.06)}
+
+/* Row 2 - Design Graphics (cards grid) */
+.cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.work-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:10px;overflow:hidden}
+.work-card img{width:100%;height:160px;object-fit:cover;display:block}
+.work-card .meta{padding:12px}
+.work-card h3{margin:0 0 6px 0;font-size:16px}
+.work-card p{margin:0;color:var(--text-secondary);font-size:14px}
+
+/* Row 3 - UI/UX showcase */
+.mockup{display:flex;flex-direction:column;gap:12px}
+.mockup .mockup-img{width:100%;height:220px;background:linear-gradient(90deg, rgba(129,140,248,0.1), rgba(56,189,248,0.06));border-radius:10px;overflow:hidden}
+.mockup img{width:100%;height:100%;object-fit:cover;display:block}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent-primary),var(--accent-secondary));color:var(--bg-main);font-weight:700}
+
+/* Footer */
+footer{padding:32px 0;color:var(--text-secondary);font-size:14px;text-align:center}
+
+/* Desktop / larger screens */
+@media(min-width:900px){
+  .hero{grid-template-columns:1fr 1fr}
+  .hero-inner{padding-right:40px}
+  .hero-visual{margin-top:0}
+  .photo-masonry{column-count:3}
+  .cards-grid{grid-template-columns:repeat(3,1fr)}
+  .wrap{padding:40px}
+}
+
+@media(min-width:1100px){
+  .wrap{padding:56px}
+  .hero{padding:80px 0}
+}
