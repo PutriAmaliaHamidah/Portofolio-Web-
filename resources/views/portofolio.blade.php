@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Pribadi</title>
     
-    <!-- Google Fonts: Poppins untuk tampilan modern -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -115,7 +114,7 @@
             }
             .hero-3d-container {
                 min-height: 500px;
-                border: none; /* Hilangkan border putus-putus saat implementasi asli */
+                border: none;
             }
         }
 
@@ -151,6 +150,7 @@
         /* List Biodata */
         .biodata-list {
             list-style: none;
+            margin-bottom: 1.5rem;
         }
 
         .biodata-list li {
@@ -162,6 +162,36 @@
             color: var(--text-primary);
             display: inline-block;
             width: 120px;
+        }
+
+        /* --- Style Baru: Badge Software Skills --- */
+        .software-skills h4 {
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .skill-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-badge {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--accent-primary);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .skill-badge:hover {
+            background-color: var(--accent-primary);
+            color: var(--bg-main);
+            transform: translateY(-2px);
         }
 
         /* Timeline Pendidikan */
@@ -218,16 +248,13 @@
             color: var(--text-primary);
         }
 
-        /* Baris 1: Fotografi (Grid 3 Kolom) */
-       /* --- Slider Fotografi --- */
+        /* --- Slider Fotografi --- */
         .slider-photography {
             display: flex;
             gap: 1rem;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
             padding-bottom: 1rem;
-            
-            /* Kustomisasi Scrollbar agar rapi */
             scrollbar-width: thin;
             scrollbar-color: var(--accent-primary) var(--bg-main);
         }
@@ -247,8 +274,8 @@
         }
 
         .photo-slide {
-            flex: 0 0 85%; /* Menampilkan 85% lebar foto di layar HP */
-            scroll-snap-align: center; /* Berhenti tepat di tengah saat digeser */
+            flex: 0 0 85%;
+            scroll-snap-align: center;
             border-radius: 12px;
             overflow: hidden;
             aspect-ratio: 1 / 1;
@@ -265,80 +292,13 @@
             transform: scale(1.05);
         }
 
-        /* Tampilan untuk Tablet dan Desktop */
         @media (min-width: 768px) {
             .photo-slide {
-                flex: 0 0 30%; /* Menampilkan 3 foto sekaligus di layar lebar */
+                flex: 0 0 30%;
                 scroll-snap-align: start;
             }
         }
 
-        /* Baris 2: Desain Grafis (Card Layout) */
-       /* --- Slider Desain Grafis --- */
-        .slider-graphic {
-            display: flex;
-            gap: 1.5rem;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            padding-bottom: 1rem;
-            
-            /* Kustomisasi Scrollbar */
-            scrollbar-width: thin;
-            scrollbar-color: var(--accent-primary) var(--bg-main);
-        }
-
-        .slider-graphic::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .slider-graphic::-webkit-scrollbar-track {
-            background: var(--bg-main);
-            border-radius: 4px;
-        }
-
-        .slider-graphic::-webkit-scrollbar-thumb {
-            background-color: var(--accent-primary);
-            border-radius: 4px;
-        }
-
-        .design-slide {
-            flex: 0 0 85%; /* Mengambil 85% lebar layar HP */
-            scroll-snap-align: center; /* Berhenti di tengah saat digeser */
-            background-color: var(--bg-section);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .design-slide:hover {
-            transform: translateY(-5px);
-        }
-
-        .design-slide img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .design-info {
-            padding: 1.5rem;
-        }
-
-        .design-info h4 {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Tampilan untuk Tablet dan Desktop */
-        @media (min-width: 768px) {
-            .design-slide {
-                flex: 0 0 45%; /* Menampilkan 2 kartu di layar lebar */
-                scroll-snap-align: start;
-            }
-        }
-
-        /* Baris 3: UI/UX Design (Showcase Foto Penuh) */
         /* --- Slider UI/UX Design --- */
         .slider-uiux {
             display: flex;
@@ -346,8 +306,6 @@
             overflow-x: auto;
             scroll-snap-type: x mandatory;
             padding-bottom: 1rem;
-            
-            /* Kustomisasi Scrollbar */
             scrollbar-width: thin;
             scrollbar-color: var(--accent-primary) var(--bg-main);
         }
@@ -367,8 +325,8 @@
         }
 
         .uiux-slide {
-            flex: 0 0 90%; /* Mengambil 90% lebar layar HP agar gambar sebelahnya ngintip sedikit */
-            scroll-snap-align: center; /* Snap di tengah */
+            flex: 0 0 90%;
+            scroll-snap-align: center;
             background-color: var(--bg-section);
             border-radius: 16px;
             overflow: hidden;
@@ -386,17 +344,16 @@
             transform: scale(1.02);
         }
 
-        /* Tampilan untuk Tablet dan Desktop */
         @media (min-width: 768px) {
             .uiux-slide {
-                flex: 0 0 75%; /* Menampilkan 75% di desktop agar gambar lebar tetap proporsional */
+                flex: 0 0 75%;
             }
             .uiux-slide img {
-                height: 450px; /* Gambar lebih tinggi di desktop */
+                height: 450px;
             }
         }
 
-        /* Utility class untuk animasi dasar (dikontrol via JS) */
+        /* Utility class untuk animasi */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -411,49 +368,53 @@
 </head>
 <body>
 
-    <!-- =======================================================================
-         1. BAGIAN HERO
-         ======================================================================= -->
     <section class="hero" id="home">
         <div class="hero-content fade-in">
             <h1>Halo, Saya <br><span class="gradient-text">Putri</span></h1>
             <p>Saya adalah mahasiswa Multimedia Broadcasting yang memiliki fokus keahlian di bidang produksi media digital, desain grafis, dan pengembangan web. Tertarik di bidang industri kreatif, aktif mengikuti perkembangan teknologi multimedia, serta memiliki pengalaman dalam memimpin kepanitiaan kampus dan manajemen organisasi.</p>
         </div>
         <div class="hero-3d-container fade-in">
-            <!-- Insert 3D Asset (e.g., Spline viewer or 3D Render PNG) here -->
             <p style="color: var(--text-secondary); opacity: 0.5;">[ Area Render Aset 3D ]</p>
         </div>
     </section>
 
-    <!-- =======================================================================
-         2. BAGIAN ABOUT ME
-         ======================================================================= -->
     <section class="about" id="about">
         <h2 class="section-title fade-in">Tentang Saya</h2>
         <div class="about-grid">
             
-            <!-- Kolom 1: Biodata -->
             <div class="card biodata fade-in">
                 <h3>Informasi Pribadi</h3>
                 <ul class="biodata-list">
                     <li><strong>Nama :</strong> Putri Amalia Hamidah</li>
-                    <li><strong>Lokasi:</strong> Surabaya</li>
+                    <li><strong>Kontak :</strong> 089699090033</li>
                     <li><strong>Email:</strong> putriamaliahamidah23@gmail.com</li>
-                    <li><strong>Minat:</strong>Desain Grafis</li>
+                    <li><strong>Lokasi:</strong> Surabaya Timur</li>
+                    <li><strong>Minat:</strong> Desain Grafis, Web Dev, UI/UX</li>
                 </ul>
+
+                <div class="software-skills">
+                    <h4>Keahlian Software:</h4>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Adobe Premiere Pro</span>
+                        <span class="skill-badge">Adobe After Effects</span>
+                        <span class="skill-badge">Adobe Illustrator</span>
+                        <span class="skill-badge">Figma</span>
+                        <span class="skill-badge">Canva</span>
+                        <span class="skill-badge">HTML / CSS / PHP</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- Kolom 2: Pendidikan -->
             <div class="card education fade-in">
                 <h3>Riwayat Pendidikan</h3>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <h4>SMA Negeri Jogorotp</h4>
+                        <h4>SMA Negeri Jogoroto</h4>
                         <span>2022 - 2024</span>
                         <p>Ilmu Pengetahuan Sosial (IPS)</p>
                     </div>
                     <div class="timeline-item">
-                        <h4>Politeknik Elektronika Negeri Surabaya </h4>
+                        <h4>Politeknik Elektronika Negeri Surabaya</h4>
                         <span>2024 - Sekarang</span>
                         <p>Menjalani program studi Teknologi Multimedia Broadcasting.</p>
                     </div>
@@ -463,9 +424,6 @@
         </div>
     </section>
 
-    <!-- =======================================================================
-         3. BAGIAN PORTOFOLIO
-         ======================================================================= -->
     <section class="portfolio" id="portfolio">
         <h2 class="section-title fade-in">Karya & Portofolio</h2>
 
@@ -478,41 +436,36 @@
             <div class="photo-slide"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=400&auto=format&fit=crop" alt="Foto 5"></div>
         </div>
 
-        <!-- Baris 2: Desain Grafis -->
         <h3 class="portfolio-category fade-in">Desain Grafis</h3>
         <div class="slider-photography fade-in">
             <div class="photo-slide">
-                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=600&auto=format&fit=crop" alt="Karya Desain 1">
+                <img src="{{ asset('img/2.png') }}" alt="Karya Desain 1">
             </div>
             <div class="photo-slide">
-                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600&auto=format&fit=crop" alt="Karya Desain 2">
+                <img src="{{ asset('img/Biryani.png') }}" alt="Karya Desain 2">
             </div>
             <div class="photo-slide">
-                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=600&auto=format&fit=crop" alt="Karya Desain 3">
+                <img src="{{ asset('img/Cake Menu.png') }}" alt="Karya Desain 3">
             </div>
              <div class="photo-slide">
-                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=600&auto=format&fit=crop" alt="Karya Desain 3">
+                <img src="{{ asset('img/poster otak atik otak kuning-01.png') }}" alt="Karya Desain 4">
             </div>
              <div class="photo-slide">
-                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=600&auto=format&fit=crop" alt="Karya Desain 3">
+                <img src="{{ asset('img/poster otak atik otak kuning-02.png') }}" alt="Karya Desain 5">
             </div>
         </div>
 
-        <!-- Baris 3: UI/UX Design (Diperbarui) -->
         <h3 class="portfolio-category fade-in">UI/UX Design</h3>
         <div class="slider-uiux fade-in">
             <div class="uiux-slide">
-                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1200&auto=format&fit=crop" alt="Mockup Aplikasi UI/UX 1">
+                <img src="{{ asset('img/Bakmie.png') }}" alt="UI/UX Design Mockup 1">
             </div>
             <div class="uiux-slide">
-                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1200&auto=format&fit=crop" alt="Mockup Aplikasi UI/UX 2">
+                <img src="{{ asset('img/Gymfit.png') }}" alt="Mockup Aplikasi UI/UX 2">
             </div>
         </div>
     </section>
 
-    <!-- =======================================================================
-         SCRIPT JAVASCRIPT (Interaktivitas Dasar)
-         ======================================================================= -->
     <script>
         // Vanilla JS untuk efek Fade-in saat elemen masuk ke viewport (Scroll Reveal)
         document.addEventListener("DOMContentLoaded", () => {
