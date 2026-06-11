@@ -1,0 +1,49 @@
+{
+    "biodata": {
+        "name": "Putri Amalia Hamidah",
+        "location": "Surabaya, Jawa Timur, Indonesia",
+        "email": "putri.amalia@example.com",
+        "academic": "Data Science, Deep Learning, & Machine Learning",
+        "aesthetic": "Mengutamakan hasil yang bersih dan photorealistic.",
+        "hobbies": "Berlari (Target 5km), Pokemon TCG."
+    },
+    "education": [
+        {
+            "id": 1,
+            "year": "Agustus Mendatang",
+            "title": "Toyohashi University of Technology",
+            "institution": "JASSO Student Exchange Program",
+            "description": "Mempersiapkan program pertukaran pelajar (JASSO) selama 6 bulan. Menargetkan laboratorium riset Data Science."
+        }
+    ],
+    "portfolio": {
+        "photography": [
+            "https:\/\/images.unsplash.com\/photo-1516035069371-29a1b244cc32?q=80&w=600",
+            "https:\/\/images.unsplash.com\/photo-1551288049-bebda4e38f71?q=80&w=600",
+            "https:\/\/images.unsplash.com\/photo-1517433670267-08bbd4be890f?q=80&w=600"
+        ],
+        "graphics": [
+            {
+                "title": "Branding Identitas",
+                "description": "Eksplorasi visual dengan komposisi yang rapi.",
+                "image": "https:\/\/images.unsplash.com\/photo-1626785774573-4b799315345d?q=80&w=600"
+            }
+        ],
+        "uiux": {
+            "title": "Antarmuka Analitik",
+            "description": "Desain dashboard responsif untuk membaca dataset kompleks.",
+            "image": "https:\/\/images.unsplash.com\/photo-1522542550221-31fd19575a2d?q=80&w=1200",
+            "link": "#"
+        }
+    },
+    "messages": [
+        {
+            "id": 1,
+            "name": "Admin System",
+            "email": "system@portfolio.com",
+            "subject": "Selamat Datang!",
+            "message": "Pesan ini dikirim secara otomatis. Formulir kontak Anda berfungsi dengan baik.",
+            "date": "2026-06-09 14:14:17"
+        }
+    ]
+}
