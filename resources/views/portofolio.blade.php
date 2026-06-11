@@ -682,11 +682,24 @@
 
         <h3 class="portfolio-category fade-in">Fotografi</h3>
         <div class="slider-horizontal fade-in">
-            <div class="photo-item"><img src="/images/foto1.jpg" alt="Foto 1"></div>
-            <div class="photo-item"><img src="/images/foto2.jpg" alt="Foto 2"></div>
-            <div class="photo-item"><img src="/images/foto3.jpg" alt="Foto 3"></div>
-            <div class="photo-item"><img src="/images/foto4.jpg" alt="Foto 4"></div>
-            <div class="photo-item"><img src="/images/foto5.jpg" alt="Foto 5"></div>
+            <div class="photo-item">
+                <img src="/img/D4.jpeg" alt="Foto D4">
+            </div>
+            <div class="photo-item">
+                <img src="/img/D4-1.jpeg" alt="Foto D4-1">
+            </div>
+            <div class="photo-item">
+                <img src="/img/jemur garam.jpeg" alt="Foto Jemur Garam">
+            </div>
+            <div class="photo-item">
+                <img src="/img/PENS.jpeg" alt="Foto PENS">
+            </div>
+            <div class="photo-item">
+                <img src="/img/Sunset.jpeg" alt="Foto Sunset">
+            </div>
+            <div class="photo-item">
+                <img src="/img/SMA.jpeg" alt="Foto SMA">
+            </div>
         </div>
 
         <h3 class="portfolio-category fade-in">Desain Grafis</h3>
